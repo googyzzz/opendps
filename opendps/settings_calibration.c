@@ -55,7 +55,7 @@ static void past_restore(past_t *past);
 static set_param_status_t set_parameter(char *name, char *value);
 static set_param_status_t get_parameter(char *name, char *value, uint32_t value_len);
 
-#define SCREEN_ID  (3)
+#define SCREEN_ID  (5)
 
 /* This is the definition of the voltage ADC item in the UI */
 ui_number_t calibration_v_dac = {

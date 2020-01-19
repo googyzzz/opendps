@@ -36,6 +36,7 @@
 #include "dps-model.h"
 #include "ili9163c.h"
 
+
 /*
  * This is the implementation of the CC screen.
  *
@@ -60,7 +61,7 @@ static set_param_status_t get_parameter(char *name, char *value, uint32_t value_
  */
 static int32_t saved_u, saved_i;
 
-#define SCREEN_ID  (2)
+#define SCREEN_ID  (3)
 #define PAST_U     (0)
 #define PAST_I     (1)
 
@@ -104,8 +105,8 @@ ui_number_t cc_current = {
     .min = 0,
     .max = CONFIG_DPS_MAX_CURRENT,
     .si_prefix = si_milli,
-    .num_digits = 1,
-    .num_decimals = 3,
+    .num_digits = CURRENT_DIGITS,
+    .num_decimals = CURRENT_DECIMALS,
     .unit = unit_ampere,
     .changed = &current_changed,
 };

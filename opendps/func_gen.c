@@ -77,7 +77,7 @@ static set_param_status_t get_parameter(char *name, char *value, uint32_t value_
 /* We need to keep copies of the period to avoid recomputing it every time. */
 static uint32_t period_us;
 
-#define SCREEN_ID  (5)
+#define SCREEN_ID  (4)
 #define PAST_U     (0)
 #define PAST_P     (1)
 #define PAST_F     (2)

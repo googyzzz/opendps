@@ -446,15 +446,17 @@ static void ui_init(void)
     ui_width = TFT_WIDTH;
     ui_height = TFT_HEIGHT;
 
-    /** Initialise the function screens */
+   /** Initialise the function screens */
     uui_init(&func_ui, &g_past);
-    func_cv_init(&func_ui);
-#ifdef CONFIG_CC_ENABLE
-    func_cc_init(&func_ui);
-#endif // CONFIG_CC_ENABLE
 #ifdef CONFIG_CL_ENABLE
     func_cl_init(&func_ui);
 #endif // CONFIG_CL_ENABLE
+
+    func_cv_init(&func_ui);
+
+#ifdef CONFIG_CC_ENABLE
+    func_cc_init(&func_ui);
+#endif // CONFIG_CC_ENABLE
 #ifdef CONFIG_FUNCGEN_ENABLE
     func_gen_init(&func_ui);
 #endif // CONFIG_FUNCGEN_ENABLE

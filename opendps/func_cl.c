@@ -67,7 +67,7 @@ enum {
     CUR_GFX_CC,
 } current_mode_gfx; 
 
-#define SCREEN_ID  (3)
+#define SCREEN_ID  (1)
 #define PAST_U     (0)
 #define PAST_I     (1)
 #define XPOS_CCCV  (25)
@@ -112,8 +112,8 @@ ui_number_t cl_current = {
     .min = 0,
     .max = CONFIG_DPS_MAX_CURRENT,
     .si_prefix = si_milli,
-    .num_digits = 1,
-    .num_decimals = 3,
+    .num_digits = CURRENT_DIGITS,
+    .num_decimals = CURRENT_DECIMALS,
     .unit = unit_ampere,
     .changed = &current_changed,
 };
