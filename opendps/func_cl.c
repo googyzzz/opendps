@@ -402,5 +402,6 @@ void func_cl_init(uui_t *ui)
         accidentally cranking up the setting 10V or more */
     cl_voltage.cur_digit = 2;
     number_init(&cl_current);
+	cl_current.cur_digit = 2;
     uui_add_screen(ui, &cl_screen);
 }

@@ -16,6 +16,8 @@ make -C opendps elf bin MODEL=DPS5005 "$@"
 touch opendps/dps-model.h
 make -C opendps elf bin MODEL=DPS5015 "$@"
 touch opendps/dps-model.h
+make -C opendps elf bin MODEL=DPS5020 "$@"
+touch opendps/dps-model.h
 make -C opendps elf bin MODEL=DPS3005 "$@"
 make -C dpsboot elf bin "$@"
 

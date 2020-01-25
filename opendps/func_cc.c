@@ -353,7 +353,8 @@ void func_cc_init(uui_t *ui)
     number_init(&cc_voltage); /** @todo: add guards for missing init calls */
     /** Start at the second most significant digit preventing the user from
         accidentally cranking up the setting 10V or more */
-//    cc_voltage.cur_digit = 2;
+    cc_voltage.cur_digit = 2;
     number_init(&cc_current);
+	cc_current.cur_digit = 2;
     uui_add_screen(ui, &cc_screen);
 }
